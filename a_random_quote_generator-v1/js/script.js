@@ -60,6 +60,7 @@ function printQuote() {
     <p class="source">${quoteObj.source}
     `;
     
+    //check if citation and/or year are provided
     if(quoteObj.citation) {
       html += `<span class="citation"> ${quoteObj.citation} </span>`;
     }
@@ -67,6 +68,7 @@ function printQuote() {
       html += `<span class="year"> ${quoteObj.year} </span>`;
     }
 
+    //combine the html
     html += '</p>';
     document.getElementById('quote-box').innerHTML = html; 
 }
